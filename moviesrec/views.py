@@ -3,6 +3,7 @@ from rest_framework.response import Response
 # Create your views here.
 from .InferenceSystem import *
 class MovieRec(APIView):
+
     def post(self, request, *args, **kwargs):
 
         #send the data in json format like this
@@ -13,6 +14,7 @@ class MovieRec(APIView):
         #"genre": value,
         #"principalactor": value,
         # }
+        # to send post request axios.post('http://localhost:8000/api/movie',data)
         data = request.data
         language = data.get('language')
         type = data.get('type')
